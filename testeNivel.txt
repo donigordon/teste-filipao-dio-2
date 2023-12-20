@@ -1,0 +1,31 @@
+let result = rankedWar(10, 5);
+
+function rankedWar(victory, lose) {
+  let numberOfDecision = victory - lose;
+  return numberOfDecision;
+}
+
+function nivel(result) {
+  if (result < 10) {
+    return "Ferro";
+  } else if (result >= 11 && result <= 20) {
+    return "Bronze";
+  } else if (result >= 21 && result <= 50) {
+    return "Prata";
+  } else if (result >= 51 && result <= 80) {
+    return "Ouro";
+  } else if (result >= 81 && result <= 90) {
+    return "Diamante";
+  } else if (result >= 91 && result <= 100) {
+    return "Lendario";
+  } else {
+    return "Imortal";
+  }
+}
+
+console.log(
+  "O Herói tem de saldo de " +
+    result +
+    " vitórias e está no nível de " +
+    nivel(result)
+);
